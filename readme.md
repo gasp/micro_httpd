@@ -1,13 +1,13 @@
-# The tinyest httpd server
+# The tinyest http server
 
-this tiny httpd server needs systemd to run (available in most linux distros)
+this tiny http server needs systemd to run (available in most linux distros)
 it listens for input socket connections and returns html pages
 
 # usage
 
 ## compile
 ```
-$ gcc micro_httpd.c -o micro_httpd
+gcc micro_httpd.c -o micro_httpd
 ```
 
 ## place into binary
@@ -38,7 +38,9 @@ echo "GET / HTTP/1.1" | /usr/sbin/micro_httpd /home/gaspard/www/
 
 as root
 ```
-rm /etc/systemd/system/sockets.target.wants/micro_httpd.socket /etc/systemd/system/micro_httpd.s* /usr/sbin/micro_httpd
+rm /etc/systemd/system/sockets.target.wants/micro_httpd.socket \
+  /etc/systemd/system/micro_httpd.s* \
+  /usr/sbin/micro_httpd
 ```
 
 # debug
