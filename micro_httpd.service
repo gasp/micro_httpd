@@ -1,0 +1,6 @@
+[Unit]
+Description=Server handling connections for micro_httpd
+
+[Service]
+ExecStart=-/usr/sbin/micro_httpd /home/gaspard/www/
+StandardInput=socket

@@ -1,0 +1,9 @@
+[Unit]
+Description=Socket for micro_httpd
+
+[Socket]
+ListenStream=8912
+Accept=yes
+
+[Install]
+WantedBy=sockets.target
